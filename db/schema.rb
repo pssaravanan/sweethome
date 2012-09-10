@@ -11,16 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120906185212) do
+ActiveRecord::Schema.define(:version => 20120907192833) do
 
   create_table "homes", :force => true do |t|
     t.string   "name"
-    t.integer  "owner_id"
     t.integer  "rent_or_sales"
     t.integer  "amount"
     t.string   "status"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "home_owner_id"
   end
 
   create_table "locations", :force => true do |t|
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(:version => 20120906185212) do
     t.string   "parent_type"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.integer  "personal_number"
+    t.integer  "office_number"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end
