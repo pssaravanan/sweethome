@@ -1,4 +1,6 @@
 Sweethome::Application.routes.draw do
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -25,6 +27,9 @@ Sweethome::Application.routes.draw do
   #     end
   #   end
 
+  resources :home
+
+  root :to => "root#index"
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

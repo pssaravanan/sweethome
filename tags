@@ -1,0 +1,35 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AddDeviseToUsers	db/migrate/20120916062800_add_devise_to_users.rb	/^class AddDeviseToUsers < ActiveRecord::Migration$/;"	c
+AddTypeFieldToUser	db/migrate/20120916095733_add_type_field_to_user.rb	/^class AddTypeFieldToUser < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Sweethome
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ChangeColumnOwnerToHomeOwner	db/migrate/20120907192833_change_column_owner_to_home_owner.rb	/^class ChangeColumnOwnerToHomeOwner < ActiveRecord::Migration$/;"	c
+CreateHomes	db/migrate/20120906182119_create_homes.rb	/^class CreateHomes < ActiveRecord::Migration$/;"	c
+CreateLocations	db/migrate/20120906185212_create_locations.rb	/^class CreateLocations < ActiveRecord::Migration$/;"	c
+CreateUsers	db/migrate/20120907184050_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+Home	app/models/home.rb	/^class Home < ActiveRecord::Base$/;"	c
+HomeOwner	app/models/home_owner.rb	/^class HomeOwner < User$/;"	c
+Location	app/models/location.rb	/^class Location < ActiveRecord::Base$/;"	c
+RemoveColumn	db/migrate/20120906184609_remove_column.rb	/^class RemoveColumn < ActiveRecord::Migration$/;"	c
+RootController	app/controllers/root_controller.rb	/^class RootController < ApplicationController$/;"	c
+RootHelper	app/helpers/root_helper.rb	/^module RootHelper$/;"	m
+Sweethome	config/application.rb	/^module Sweethome$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+change	db/migrate/20120906182119_create_homes.rb	/^  def change$/;"	f	class:CreateHomes
+change	db/migrate/20120906185212_create_locations.rb	/^  def change$/;"	f	class:CreateLocations
+change	db/migrate/20120907184050_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+down	db/migrate/20120906184609_remove_column.rb	/^  def down$/;"	f	class:RemoveColumn
+down	db/migrate/20120907192833_change_column_owner_to_home_owner.rb	/^  def down$/;"	f	class:ChangeColumnOwnerToHomeOwner
+down	db/migrate/20120916062800_add_devise_to_users.rb	/^  def self.down$/;"	F	class:AddDeviseToUsers
+down	db/migrate/20120916095733_add_type_field_to_user.rb	/^  def down$/;"	f	class:AddTypeFieldToUser
+index	app/controllers/root_controller.rb	/^  def index$/;"	f	class:RootController
+up	db/migrate/20120906184609_remove_column.rb	/^  def up$/;"	f	class:RemoveColumn
+up	db/migrate/20120907192833_change_column_owner_to_home_owner.rb	/^  def up$/;"	f	class:ChangeColumnOwnerToHomeOwner
+up	db/migrate/20120916062800_add_devise_to_users.rb	/^  def self.up$/;"	F	class:AddDeviseToUsers
+up	db/migrate/20120916095733_add_type_field_to_user.rb	/^  def up$/;"	f	class:AddTypeFieldToUser
