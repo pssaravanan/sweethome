@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  HomeOwner = "HomeOwner"
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -9,4 +10,8 @@ class User < ActiveRecord::Base
   has_one :location, :as => :parent
   validates_presence_of :name
   validates_presence_of :personal_number
+
+  def home_owner?
+    type.eql?(HomeOwner)
+  end
 end
