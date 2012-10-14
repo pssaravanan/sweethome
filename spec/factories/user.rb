@@ -5,4 +5,6 @@ FactoryGirl.define do
     email "xyz@abc.com"
     password "xxxxxxx"
   end
+
+  factory :home_owner, :parent => :user, :class => HomeOwner
 end
