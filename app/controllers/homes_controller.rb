@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
   before_filter :authenticate_user!
+  load_and_authorize_resource
 
   def index
     @homes = Home.find_all_by_home_owner_id(current_user.id)

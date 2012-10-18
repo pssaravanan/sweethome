@@ -24,6 +24,8 @@ class Ability
     #   can :update, Article, :published => true
     #
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
-
+    if user.home_owner?
+      can :manage, :all
+    end
   end
 end

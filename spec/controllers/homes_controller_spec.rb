@@ -10,6 +10,7 @@ describe HomesController do
     home2 = create(:home, :home_owner => @user)
     get :index
     assigns[:homes].should == [home1, home2]
+    response.should render_template(:index)
   end
 
   it 'should render form for creating new home' do
@@ -25,5 +26,14 @@ describe HomesController do
                               :location_attributes => {:address => "street", :city => "Chenai", :pincode => 612001}}
     }.should change{Home.count}.by(1)
     response.should redirect_to('/homes')
+  end
+
+  it 'should not allow other user to view the home' do
+    user = create(:user)
+    sign_in user
+    post :create, :home => {:name => "some name", :rent_or_sales => 1,
+                              :amount => 15000, :status => "New",
+                              :location_attributes => {:address => "street", :city => "Chenai", :pincode => 612001}}
+    response.should redirect_to(root_path)
   end
 end
