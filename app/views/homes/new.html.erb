@@ -1,0 +1,17 @@
+<%= form_for @home,  :url =>{:controller => :homes, :action => :create} do |f| %>
+  <%=f.label :name %>
+ <%= f.text_field :name %>
+  <%=f.label :rent_or_sales %>
+ <%= f.select :rent_or_sales, ["Rent", "Sales"] %>
+  <%=f.label :amount %>
+ <%= f.text_field :amount %>
+ <%= f.fields_for :location_attributes do |fl| %>
+  <%=f.label :address %>
+   <%= fl.text_field :address %>
+  <%=f.label :city %>
+   <%= fl.text_field :city %>
+  <%=f.label :pincode %>
+   <%= fl.text_field :pincode %>
+ <% end %>
+ <%=f.submit 'save' %>
+<% end %>

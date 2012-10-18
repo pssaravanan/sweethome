@@ -27,7 +27,7 @@ Sweethome::Application.routes.draw do
   #     end
   #   end
 
-  resources :home
+  resources :homes
 
   root :to => "root#index"
   # Sample resource route with sub-resources:

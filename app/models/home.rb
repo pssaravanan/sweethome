@@ -3,4 +3,5 @@ class Home < ActiveRecord::Base
   validates_presence_of :location
   validates_presence_of :home_owner_id
   belongs_to :home_owner
+  accepts_nested_attributes_for :location
 end
