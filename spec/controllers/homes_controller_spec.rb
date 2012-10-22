@@ -36,4 +36,12 @@ describe HomesController do
                               :location_attributes => {:address => "street", :city => "Chenai", :pincode => 612001}}
     response.should redirect_to(root_path)
   end
+
+  it 'should render edit page' do
+    home = create(:home, :home_owner => @user)
+    post :edit, :id => home.id
+    assigns[:home].should == home
+    response.should render_template(:new)
+  end
+
 end

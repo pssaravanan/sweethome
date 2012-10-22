@@ -14,4 +14,9 @@ class HomesController < ApplicationController
     @home = Home.create(params[:home].merge!(:home_owner => HomeOwner.find(current_user.id)))
     redirect_to homes_path
   end
+
+  def edit
+    #load and authorise will load home
+    render :new
+  end
 end
