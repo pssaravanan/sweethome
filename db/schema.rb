@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121014175002) do
+ActiveRecord::Schema.define(:version => 20121022165403) do
 
   create_table "homes", :force => true do |t|
     t.string   "name"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(:version => 20121014175002) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.integer  "personal_number"
-    t.integer  "office_number"
+    t.string   "personal_number"
+    t.string   "office_number"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "email",                  :default => "", :null => false
